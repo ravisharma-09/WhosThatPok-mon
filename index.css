@@ -58,14 +58,61 @@ letter-spacing: 0.2rem ;
     box-shadow: 0 0 5px hsl(0,1%, 31%) ;
 }
 #display{
-    /* visibility: hidden ; */
-    background-color: blue ;
-    width: 80px ;
-    height: 80px ;
+   border:2px solid hsl(0, 1%,31%) ;
+   padding: 2rem ;
+   font-size: 1.5rem ;
+   border-radius:1rem ;
+   width:25rem ;
+   display:flex ;
+   flex-direction:column ;
+    align-items:center ;
+    /* gap: 0.4em; */
+    background-color: hsl(0, 0%, 77%);
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     
 }
+#display h2{
+    font-family: monospace;
+  font-size: 2.4rem;
+  text-transform: capitalize;  
+  color: hsl(0, 1%, 20%);
+}
+
+#display img{
+    width:280px ;
+    height:280px ;
+    object-fit:contain ;
+    
+}
+.statrow{
+    display:flex ;
+    align-items:center ;
+    gap: 0.5rem ;
+    width:100% ;
+}
+.statname{
+    font-size: 1.2rem ;
+    font-family: monospace ;
+    width: 120px ;
+    color: hsl(0, 1%, 31%) ;
+    text-transform: capitalize ;
+    margin-bottom: 0.6rem ;
+}
+.statbarbg{
+    flex:1 ;
+    background-color: hsl(0, 0%, 80%) ;
+    border-radius: 1rem ;
+    height: 10px ;
+}
+.statbarfil{
+    height: 10px ;
+    border-radius: 1rem ;
+    background-color: hsl(120, 50%, 50%) ;
+}
+.statnum {
+  font-size: 1.2rem;
+  width: 30px;
+}
 #gridcards{
-    background-color: green;
-    width: 80px ;
-    height: 80px ;
+    
 }

@@ -8,6 +8,7 @@ async function fetchpoki(name) {
 
         const data = await response.json() ;
         console.log(data)
+        rendercard(data) ;
     }
     catch(error){
         console.error(error)
@@ -25,3 +26,47 @@ btn.addEventListener('click' , () =>{
         fetchpoki(name)
     }
 })
+
+
+function rendercard(data){
+    const name = data.name ;
+    const id = data.id ;
+    const sprite = data.sprites.other["official-artwork"].front_default ;
+    const types = data.types.map(t => t.type.name) ;
+    const weight = data.weight /10
+    const height = data.height / 10
+    const stats = data.stats.map(s =>({
+        name : s.stat.name,
+        value : s.base_stat 
+    }))
+    const ability = data.abilities.map(t => t.ability.name);
+    const exp = data.base_experience ;
+    
+    const display = document.getElementById("display") ;
+    display.innerHTML = `
+    <h2>#${id} ${name}</h2>
+    <img src="${sprite}" alt="${name}" width="200" height="300">
+    <p>Heigth: ${height} m | Weight: ${weight} kg</p>
+    <p>type: ${types.join(', ')}</p>
+    <p>Abilities: ${ability.join(', ')}</P>
+    <p>Base EXP: ${exp}</P>
+    <p>Stats:</p>
+    
+    ${stats.map(s => `
+        <div class="statrow">
+        <span class="statname"> ${s.name} </span>
+        <div class="statbarbg">
+        <div class="statbarfil" style="width:${(s.value/150)*100}%"></div>
+        </div>
+        <span class="statnum">${s.value}</span>
+        </div>
+        
+        `).join('')}
+
+    </p>
+    
+    `
+    
+
+
+}
