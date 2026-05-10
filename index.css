@@ -8,7 +8,9 @@
     
 }
 h1{
-    font-size: 3.5rem ;
+   font-size: clamp(1.8rem, 6vw, 3.5rem);
+   padding: 0.5rem 1rem ;
+   text-align: center ;
     font-family: monospace ;
     color: hsl(0, 1%, 31%) ;
 letter-spacing: 0.2rem ;
@@ -19,11 +21,15 @@ letter-spacing: 0.2rem ;
     display:flex ;
     flex-direction:row ;
     align-items:center ;
-    margin-top: 0.2rem ;  
+    margin-top: 0.2rem ; 
+    margin-left: 2rem ;
+    flex-wrap: wrap ; 
+    gap: 0.5rem ;  
 
 }
 #search #inpo{
-    width:20rem ;
+    width:70vw ;
+    max-width: 20rem ;
     margin-right: 0.5rem ;
     padding: 0.5rem ;
     font-size: 1.5rem ;
@@ -82,7 +88,8 @@ letter-spacing: 0.2rem ;
    padding: 2rem ;
    font-size: 1.5rem ;
    border-radius:1rem ;
-   width:25rem ;
+   max-width:25rem ;
+   width: 80vw ;
    
     display:none ;
     text-align: center ;
@@ -136,4 +143,29 @@ box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 
 #gridcards{
     
+}
+
+
+
+@media (max-width: 600px){
+    #search{
+        flex-direction: column ;
+        align-items: stretch ;
+        margin-left: 0 ;
+    }
+    #search #inpo{
+        width:100% ;
+        margin-right: 0 ;
+        margin-bottom: 0.5rem ;
+    }
+    #search #btn{
+        width:100% ;
+        margin-left: 0 ;
+    }
+    #search #cl{
+        position:absolute ;
+        top:10px ;
+        right:10px ;
+    }
+
 }

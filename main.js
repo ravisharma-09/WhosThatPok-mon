@@ -31,6 +31,7 @@ btn.addEventListener('click' , () =>{
 
 
 function rendercard(data){
+    
     const name = data.name ;
     const id = data.id ;
     const sprite = data.sprites.other["official-artwork"].front_default ;
