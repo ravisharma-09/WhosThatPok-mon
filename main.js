@@ -7,7 +7,7 @@ async function fetchpoki() {
         }
 
         const data = await response.json() ;
-        console.log(data.name)
+        console.log(data.cries.legacy)
     }
     catch(error){
         console.error(error)
