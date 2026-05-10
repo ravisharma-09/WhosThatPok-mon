@@ -24,6 +24,8 @@ btn.addEventListener('click' , () =>{
     const name = inpo.value.toLowerCase() ;
     if (name) {
         fetchpoki(name)
+        display.style.display = "block" ;
+
     }
 })
 
@@ -50,13 +52,13 @@ function rendercard(data){
     <p>type: ${types.join(', ')}</p>
     <p>Abilities: ${ability.join(', ')}</P>
     <p>Base EXP: ${exp}</P>
-    <p>Stats:</p>
+    <p style="text-align:left; font-size:1.9rem;">Stats:</p>
     
     ${stats.map(s => `
         <div class="statrow">
         <span class="statname"> ${s.name} </span>
         <div class="statbarbg">
-        <div class="statbarfil" style="width:${(s.value/150)*100}%"></div>
+        <div class="statbarfil" style="width:${(s.value/250)*100}%"></div>
         </div>
         <span class="statnum">${s.value}</span>
         </div>
@@ -66,7 +68,9 @@ function rendercard(data){
     </p>
     
     `
-    
 
-
+}
+function closecard(){
+    display.style.display = "none" ;
+    inpo.value = "" ;
 }

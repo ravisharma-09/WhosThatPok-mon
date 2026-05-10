@@ -5,6 +5,7 @@
     flex-direction:column ;
     align-items:center ;
     gap:2rem ;
+    
 }
 h1{
     font-size: 3.5rem ;
@@ -57,15 +58,34 @@ letter-spacing: 0.2rem ;
     background-color: hsl(0, 1%, 10%) ;
     box-shadow: 0 0 5px hsl(0,1%, 31%) ;
 }
+#search #cl{
+    background-color: hsl(0, 1%, 31%) ;
+    color: white ;
+    border:none ;
+    border-radius: 50%;
+    width: 30px ;
+    height: 30px ;
+    margin-left: 0.5rem ;
+    padding:10px;
+    font-size: 1.2rem ;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer ;
+}
+#search #cl:hover{
+    background-color: hsl(0, 1%, 10%) ;
+    box-shadow: 0 0 5px hsl(0,1%, 31%) ;
+}
 #display{
    border:2px solid hsl(0, 1%,31%) ;
    padding: 2rem ;
    font-size: 1.5rem ;
    border-radius:1rem ;
    width:25rem ;
-   display:flex ;
-   flex-direction:column ;
-    align-items:center ;
+   
+    display:none ;
+    text-align: center ;
     /* gap: 0.4em; */
     background-color: hsl(0, 0%, 77%);
 box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -113,6 +133,7 @@ box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   font-size: 1.2rem;
   width: 30px;
 }
+
 #gridcards{
     
 }
