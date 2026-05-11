@@ -142,12 +142,42 @@ box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 #gridcards{
-    
+    display: grid ;
+    grid-template-columns: repeat(3,1fr) ;
+    gap:4rem;
+    margin-top: 3rem ;
+
+}
+#gridcards .pokecard{
+    border: 2px solid hsl(0, 1%, 31%) ;
+    border-radius: 1rem ;
+    padding: 1rem ;
+    text-align: center ;
+    background-color: hsl(0, 0%, 77%) ;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+#gridcards .exp{
+    font-size:1.2rem ;
+    font-family:monospace ;
 }
 
+.load{
+    padding: 0.8rem 1.5rem ;
+    border: none ;
+    border-radius:0.5rem ;
+    background-color: hsl(0, 1%, 31%) ;
+    color:white ;
+    font-size:1.2rem ;
+    cursor: pointer ;
+    font-family:monospace ;
+    margin-top:1rem ;
+}
+.load:hover{
+    background-color: hsl(0, 1%, 10%) ;
+    box-shadow: 0 0 5px hsl(0,1%, 31%) ;
+}
 
-
-@media (max-width: 600px){
+@media (max-width: 690px){
     #search{
         flex-direction: column ;
         align-items: stretch ;
@@ -167,5 +197,14 @@ box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         top:10px ;
         right:10px ;
     }
+    #gridcards{
+   grid-template-columns: repeat(2,1fr) ;
+    gap:2rem;
+    margin-top: 3rem ;}
 
+}
+@media (max-width: 530px){
+    #gridcards{
+        grid-template-columns:1fr ;
+    }
 }
