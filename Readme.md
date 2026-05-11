@@ -3,9 +3,13 @@
 A pokemon stats website built with Html, Css , javaScript using the PokeApi 
 
 ## live demo 
-
+https://whos-that-pok-mon-wox8.vercel.app/
 
 ## preivew 
+<img width="2338" height="1318" alt="Screenshot 2026-05-12 at 12 18 52 AM" src="https://github.com/user-attachments/assets/3b0ca76e-e083-435b-9cca-d5a9e35af8ac" />
+
+<img width="2700" height="1520" alt="Screenshot 2026-05-12 at 12 17 26 AM" src="https://github.com/user-attachments/assets/28616a4d-3289-40df-b4ea-534b038a8ff3" />
+
 
 
 ## features
